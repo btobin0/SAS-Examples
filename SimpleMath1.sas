@@ -1,0 +1,12 @@
+DATA MYDATA;
+     PI=3.1415927;
+     RADIUS=4;
+     AREA=PI*RADIUS**2;
+     CIRCUM=2*PI*RADIUS;
+     W=2;
+     H=2;
+     L=2;
+     VOLUME=W*H*L;
+RUN;
+PROC PRINT PI AREA CIRCUM VOLUME;
+RUN;

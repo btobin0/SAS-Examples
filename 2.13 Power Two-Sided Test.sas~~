@@ -1,0 +1,42 @@
+proc power;
+title 'This is a Power Two-Sided Test';
+twosamplemeans
+/* alpha = 0.01 */
+/* sides = 1 */
+groupmeans = 10 | 14
+stddev = 20
+power = 0.8
+ntotal = . ;
+run;
+proc power;
+title 'This is a Power Two-Sided Test Multi Group';
+twosamplemeans test=diff_satt
+/* alpha = 0.01 */
+/* sides = 1 */
+meandiff= 3 6
+groupstddevs= 7 | 7 9 12
+power = .
+ntotal = 50 ;
+run;
+proc power;
+title 'This is a Power Two-Sided Test With Plot';
+twosamplemeans test=diff_satt
+/* alpha = 0.01 */
+/* sides = 1 */
+meandiff= 3 6
+groupstddevs= 7 | 7 9 12
+power = 0.9
+ntotal = . ;
+plot x=effect min=3 max=6;
+run;
+proc power;
+title 'This is a Power Two-Sided Test With Plot';
+twosamplemeans test=diff_satt
+/* alpha = 0.01 */
+/* sides = 1 */
+meandiff= 3 6
+groupstddevs= 7 | 7 9 12
+power = 0.9
+ntotal = . ;
+plot x=effect min=3 max=100;
+run;
